@@ -6,10 +6,7 @@ See the example file from the stock Reactor Demo Galaxy: [Demo_Area.txt](Log/Dem
 The code is the first phase of a version control. When run it will generate files of the configuration of
 all instances in the areas under the base area being requested. Each file represents an area. At this point it
 is capable of gathering a listing of all Areas with version, Object instances with version, UDA's with extension flags,
-inherited scripts. There needs to be a file structure set up for it to operate in and all of the files attached need
-to have the .vbs extension added to them. This can be run from any system that is capable of accessing the GR node.
-The file structure should be placed in the root, or as close as possible, of whichever drive you choose to locate it
-on. If the galaxy has too many levels, and the names get too long I have run into path\file name length limitations. 
+inherited scripts.  
 
 ## Usage
 
@@ -23,6 +20,11 @@ You will need the SQL database, user name, password, and root area that is going
 * Tested on System Platform 3.0 SP2, and 2014.
 
 ## Runtime Notes
+
+This can be run from any system that is capable of accessing the GR node.
+
+The file structure should be placed in the root, or as close as possible, of whichever drive you choose to locate it
+on. If the galaxy has too many levels, and the names get too long I have run into path\file name length limitations.
 
 Running aaConfigList with the NoAttrib argument will result in an abbreviated listing with objects with versions only. 
 This runs much, much faster and can identify which objects have changed when compared with an earlier NoAttrib run. 

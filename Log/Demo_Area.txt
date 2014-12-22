@@ -1,0 +1,178 @@
+
+   <------------------->  Object_ID = 688 - Configuration_Version = 1 <------------------->
+   ReactorDemo.Demo_Area
+
+
+   <------------------->  Object_ID = 784 - Configuration_Version = 196 <------------------->
+   ReactorDemo.Demo_Area.aaReactorDemo
+
+
+   <------------------->  Object_ID = 694 - Configuration_Version = 76 <------------------->
+   ReactorDemo.Demo_Area.Drum_Conveyor
+
+    
+                              <---------- Scripts ---------->
+    
+    
+                                    **** Set_Refs ****
+    
+    If Me.Set_Refs.ExecutionCnt >= 3 then
+    
+    
+    
+      Me.Auto.InputSource = Me.SIMID + ".Auto";
+    
+      Me.Cycle.InputSource = Me.SIMID + ".Cycle";
+      Me.Speed.InputSource = Me.SIMID + ".Speed";
+      Me.Ejector.InputSource = Me.SIMID + ".Ejector";
+      Me.HorizontalMovement.InputSource = Me.SIMID + ".HorizontalMove";  
+      Me.VerticalMovement.InputSource = Me.SIMID + ".VerticalMove";
+     
+    
+      Me.Ref_Done = True;
+    
+
+                            <---------- Attributes ---------->
+
+   __Attr_Name_List_1 = <AttrXML/>
+   Auto = False          Extension Flags - I/O
+   Cycle = 0          Extension Flags - I/O
+   DrumCount = 0
+   Ejector = False          Extension Flags - I/O
+   HorizontalMovement = 0.0          Extension Flags - I/O
+   PanelPCPower = False
+   Ref_Done = False
+   ScreenWidth = 1280
+   SIMID = "ConveyorSim"
+   Speed = 0.0          Extension Flags - I/O
+   VerticalMovement = 0.0          Extension Flags - I/O
+
+   <------------------->  Object_ID = 684 - Configuration_Version = 56 <------------------->
+   ReactorDemo.Demo_Area.GR_Platform
+
+
+   <------------------->  Object_ID = 692 - Configuration_Version = 52 <------------------->
+   ReactorDemo.Demo_Area.R31
+
+    
+                              <---------- Scripts ---------->
+    
+    
+                                    **** Set_Refs ****
+    
+    
+    If Me.Set_Refs.ExecutionCnt >= 2 then
+    
+    Me.Auto.InputSource = Me.SimID + ".Auto";
+    Me.BatchNum.InputSource = Me.SimID + ".BatchNum";
+    Me.BatchPhase.InputSource = Me.SimID + ".BatchPhase";
+    Me.ConcentratePercent.InputSource = Me.SimId + ".ConcPercent";
+    Me.Ref_Done = True;
+    
+
+                            <---------- Attributes ---------->
+
+   __Attr_Name_List_1 = <AttrXML/>
+   Auto = False          Extension Flags - I/O
+   BatchNum = 0          Extension Flags - I
+   BatchPhase = 0          Extension Flags - I
+   ConcentratePercent = 0.0          Extension Flags - I/O
+   Ref_Done = False
+   SimID = "R31_PLC"
+
+   <------------------->  Object_ID = 701 - Configuration_Version = 79 <------------------->
+   ReactorDemo.Demo_Area.R31.Reactor_001
+
+    
+                              <---------- Scripts ---------->
+    
+    
+                                    **** Set_Refs ****
+    
+    
+    If Me.Set_Refs.ExecutionCnt >= 3 and MyContainer.Ref_Done == True then
+    
+       Me.ConcPump.Input.InputSource = MyContainer.SimID + ".ConcPump";
+       Me.ConcPump.Output.OutputDest = MyContainer.SimID + ".ConcPump";
+    
+       Me.ConcValve.Input.InputSource = MyContainer.SimID + ".ConcValve";
+       Me.ConcValve.Output.OutputDest = MyContainer.SimID + ".ConcValve";
+    
+       Me.TransferPump.Input.InputSource = MyContainer.SimID + ".TransferPump";
+       Me.TransferPump.Output.OutputDest = MyContainer.SimID + ".TransferPump";
+    
+       Me.TransferValve.Input.InputSource = MyContainer.SimID + ".TransferValve";
+       Me.TransferValve.Output.OutputDest = MyContainer.SimID + ".TransferValve";
+    
+       Me.Mixer.Input.InputSource = MyContainer.SimID + ".Mixer";
+       Me.Mixer.Output.OutputDest = MyContainer.SimID + ".Mixer";
+    
+       Me.SteamValve.Input.InputSource = MyContainer.SimID + ".SteamValve";
+       Me.SteamValve.Output.OutputDest = MyContainer.SimID + ".SteamValve";
+    
+       Me.WaterValve.Input.InputSource = MyContainer.SimID + ".WaterValve";
+       Me.WaterValve.Output.OutputDest = MyContainer.SimID + ".WaterValve";
+    
+       Me.ReactLevel.Input.InputSource = MyContainer.SimID + ".ReactLevel";
+    
+       Me.ReactTemp.Input.InputSource = MyContainer.SimID + ".ReactTemp";
+    
+       Me.Auto.InputSource = Mycontainer.Tagname + ".Auto";
+    
+       Me.Ref_Done = True;
+    
+
+                            <---------- Attributes ---------->
+
+   __Attr_Name_List_1 = <AttrXML/>
+   __Attr_Name_List_2 = <AttrXML><AnalogAttr Name="ReactTemp" Template="$ReactorSet.Reactor"/><AnalogAttr Name="ReactLevel" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="WaterValve" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="ConcValve" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="TransferValve" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="SteamValve" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="Mixer" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="ConcPump" Template="$ReactorSet.Reactor"/><DiscreteAttr Name="TransferPump" Template="$ReactorSet.Reactor"/></AttrXML>
+   Auto = False          Extension Flags - I/O
+   ConcPump = False          Extension Flags - SymbolExtension, SymbolExtension
+   ConcValve = False          Extension Flags - SymbolExtension, SymbolExtension
+   Mixer = False
+   ReactLevel = 0.0
+   ReactTemp = 0.0
+   Ref_Done = False
+   SteamValve = False          Extension Flags - SymbolExtension, SymbolExtension
+   SteamValve_InMaintenance = False
+   TransferPump = False          Extension Flags - SymbolExtension, SymbolExtension
+   TransferValve = False          Extension Flags - SymbolExtension, SymbolExtension
+   WaterValve = False          Extension Flags - SymbolExtension, SymbolExtension
+
+   <------------------->  Object_ID = 699 - Configuration_Version = 31 <------------------->
+   ReactorDemo.Demo_Area.R31.StorageTank_001
+
+    
+                              <---------- Scripts ---------->
+    
+    
+                                    **** Set_Refs ****
+    
+    
+    If Me.Set_Refs.ExecutionCnt >= 3 and MyContainer.Ref_Done == True then
+    
+    Me.OutletValve.Input.InputSource = MyContainer.SimID + ".OutputValve";
+    Me.OutletValve.Output.OutputDest = MyContainer.SimID + ".OutputValve";
+    
+    Me.ProdLevel.Input.InputSource = MyContainer.SimID + ".ProdLevel";
+    Me.ProdLevel.Output.OutputDest = MyContainer.SimID + ".ProdLevel";
+    
+    Me.Auto.InputSource = Mycontainer.Tagname + ".Auto";
+    
+    Me.Ref_Done = True;
+    
+
+                            <---------- Attributes ---------->
+
+   __Attr_Name_List_1 = <AttrXML/>
+   __Attr_Name_List_2 = <AttrXML><AnalogAttr Name="ProdLevel" Template="$ReactorSet.StorageTank"/><DiscreteAttr Name="OutletValve" Template="$ReactorSet.StorageTank"/></AttrXML>
+   Auto = False          Extension Flags - I/O
+   MaxLevel = 10000
+   MinLevel = 0
+   OutletValve = False
+   ProdLevel = 0.0
+   Ref_Done = False
+
+   <------------------->  Object_ID = 782 - Configuration_Version = 1 <------------------->
+   ReactorDemo.Demo_Area.ViewEngine
+

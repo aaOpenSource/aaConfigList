@@ -1,0 +1,7 @@
+name: aaOpenSource/aaConfigList
+author:
+  name: Andrew Robinson
+  email: aprobi@gmail.com
+  url: 'http://www.phase2automation.com'
+copyright: 2015 Andrew Robinson
+description: "Exports a Galaxy's configuration information using SQL queries"
